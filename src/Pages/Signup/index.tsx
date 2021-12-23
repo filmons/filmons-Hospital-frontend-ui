@@ -4,7 +4,7 @@ import "./style.scss";
 
 function Signup() {
   return (
-    <section className="login">
+    <section className="signup">
       <h2>Se connecter</h2>
 
       <form>
