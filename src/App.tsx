@@ -3,12 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Login from "../src/Pages/Login";
 import Signup from "../src/Pages/Signup";
-<<<<<<< HEAD
 import Header from './Components/MenuAppBar';
-=======
 import DetailsPage from "../src/Pages/DetailsPage";
 
->>>>>>> LOG IN SIGNUP
 
 
 function App() {

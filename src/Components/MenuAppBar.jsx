@@ -26,7 +26,7 @@ export default function MenuAppBar() {
   };
 
   const handleClose = () => {
-    // setAnchorEl(null);
+    setAnchorEl(null);
     this.props.history.push("/login");
 
   };
@@ -58,12 +58,12 @@ export default function MenuAppBar() {
           </IconButton>
          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Photos
+          We Care
           </Typography>
 
           <div >
           <Typography variant="h6" component="div" sx={{ flexGrow: 2 }}>
-            Photos
+            We Care
           </Typography>
           </div>
           {auth && (
@@ -92,10 +92,11 @@ export default function MenuAppBar() {
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClose}
+             
               >
-                <MenuItem >Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <Link to="signup"><MenuItem >Signup</MenuItem></Link>
+                <Link to="login"><MenuItem >Login</MenuItem></Link>
+                <MenuItem onClick={handleClose}>CLOSE</MenuItem>
               </Menu>
             </div>
           )}
