@@ -1,10 +1,22 @@
-import React from 'react'
-
+import React from 'react';
+import Card from '../../Components/Card';
+import './style.scss';
 function home() {
     return (
-        <div>
-            
-        </div>
+        <section className='cardsection'>
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+           <Card/> 
+        </section>
     )
 }
 
