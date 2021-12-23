@@ -1,18 +1,17 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.scss';
+import Header from './Components/MenuAppBar';
+// import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-       
-      </header>
-    </div>
+    <Router>
+    <Header/>
+    <Routes>
+      {/* <Route path="/" element={<Home/>} /> */}
+    </Routes>
+  </Router>
   );
 }
 
