@@ -2,12 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-import Card from "../Card/index";
 
 function Signup() {
   return (
     <section className="details-page">
-      <Card />
       <h2>HOSPITAL NAME</h2>
       <p>01 01 20 35 23</p>
       <p>5 RUE FRANCE , PARIS</p>
