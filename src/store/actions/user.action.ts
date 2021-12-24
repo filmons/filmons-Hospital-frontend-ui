@@ -8,6 +8,13 @@ export const login = (user: string ) => {
     }
 }
 
+export const signup = (user: string ) => {
+    return {
+        type: "SIGNUP",
+        payload: user
+    }
+}
+
 export const logout = () => {
     localStorage.removeItem('access-token');
     return {

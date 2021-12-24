@@ -2,7 +2,19 @@
 export type user = {
     email: string,
     password: string,
-    access_token: string
+    access_token: string,
+   
+}
+
+
+export type usersignup = {
+    email: string,
+    password: string,
+    tele : string,
+    adresse : string,
+    nom : string,
+    prenom : string
+
 }
 
 

@@ -1,6 +1,7 @@
-import { signIn, getByUser } from "./user.service";
+import { signIn, getByUser , signUp } from "./user.service";
 
 export const userServices = { 
     signIn, 
     getByUser,
+    signUp
 };
