@@ -27,6 +27,14 @@ body {
 }
 
 
+.mainhome{
+  color: #ffffff;
+
+  &:hover{
+    color: #e4e4e4;
+  }
+}
+
 h1 {
   font-weight: 400;
 }

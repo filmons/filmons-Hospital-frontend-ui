@@ -56,7 +56,7 @@ export default function MenuAppBar() {
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            We Care
+           <Link to="./" className="mainhome">We Care</Link> 
           </Typography>
           {auth && <AccountCircle />}
 
