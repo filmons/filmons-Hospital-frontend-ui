@@ -97,7 +97,7 @@ export default function MenuAppBar() {
               <Link to="rdvs">
                 <MenuItem>Mes RDV</MenuItem>
               </Link>
-              <MenuItem onClick={handleClose}>CLOSE</MenuItem>
+              <MenuItem onClick={handleClose}>Fermer</MenuItem>
             </Menu>
           </div>
         </Toolbar>
