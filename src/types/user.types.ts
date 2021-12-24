@@ -5,6 +5,7 @@ export type user = {
     access_token: string
 }
 
+
 export type userStore = {
     user: user | null,
     isLogged: boolean

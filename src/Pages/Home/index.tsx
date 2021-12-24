@@ -5,8 +5,9 @@ import "./style.scss";
 
 function home() {
   return (
-    <main>
+      <section className="home">
         <SearchBar />
+    <main>
       <section className="cardsection">
         <Card />
         <Card />
@@ -21,7 +22,7 @@ function home() {
         <Card />
         <Card />
       </section>
-    </main>
+    </main>      </section>
   );
 }
 
