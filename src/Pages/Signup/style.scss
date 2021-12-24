@@ -1,76 +1,71 @@
-@import '../../Assete/main.scss';
-
+@import "../../Assete/main.scss";
 
 .signup {
-    width: 30%;
-    margin: 0 auto;
-    padding: 2% 5%;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2% 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    float: left;
+    color: $black;
+  }
+  form {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-  
-    h2{
-      float: left;
-      color: $black;
-    }
-    form {
+    width: 100%;
+    margin: auto auto;
+    .form-group {
+      margin: 2% auto;
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin: auto auto;
-      .form-group {
-        margin: 2% auto;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-  
-        .required {
-          color: red;
-        }
-  
-  
-      label{
-        color:$black;
+
+      .required {
+        color: red;
       }
-  
-     
-      }
-  
-  
-      .text-info {
+
+      label {
         color: $black;
-        text-align: center;
-        margin: 1% auto;
-    
-        a{
-          color: $maincolor;
-        }
-  
-        .required {
-          color: red;
-        }
-      }
-  
-      .form-control {
-        accent-color: $maincolor;
-        cursor: text;
-        padding: 3%;
-        border: 0.5px solid $maincolor;
-        border-radius: 5px;
-  
-        &:hover {
-          outline: 0.5px solid $black;
-        }
       }
     }
-  
-    .mainbutton {
-      margin: 5px auto;
-      width: 100%;
-      background: $maincolor;
-      padding: 4%;
-      border: none;
-      color: $white;
+
+    .text-info {
+      color: $black;
+      text-align: center;
+      margin: 1% auto;
+
+      a {
+        color: $maincolor;
+      }
+
+      .required {
+        color: red;
+      }
+    }
+
+    .form-control {
+      accent-color: $maincolor;
+      cursor: text;
+      padding: 3%;
+      border: 0.5px solid $maincolor;
+      border-radius: 5px;
+
+      &:hover {
+        outline: 0.5px solid $black;
+      }
     }
   }
+
+  .mainbutton {
+    margin: 5px auto;
+    width: 100%;
+    background: $maincolor;
+    padding: 4%;
+    border: none;
+    color: $white;
+  }
+}

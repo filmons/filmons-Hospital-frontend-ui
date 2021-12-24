@@ -4,6 +4,7 @@ import "./style.scss";
 
 function Signup() {
   return (
+    <main>
     <section className="signup">
       <h2>Se connecter</h2>
 
@@ -70,7 +71,7 @@ function Signup() {
           </p>
         </div>
       </form>
-    </section>
+    </section></main>
   );
 }
 

@@ -20,19 +20,19 @@ function Login() {
     e.preventDefault();
     try {
       const response = await userServices.signIn({ email, password });
-      const user = response.data;
+      const user = response.data.token;
+      console.log(user);
+      
       localStorage.setItem("access-token", user);
       dispatch(login(user));
-      console.log(response);
-      if (response.data.error.status != 400) {
         navigate("/");
-      }
     } catch (error: any) {
       setError(true);
     }
   };
 
   return (
+    <main>
     <section className="login">
       <h2>Se connecter</h2>
 
@@ -76,7 +76,7 @@ function Login() {
           </p>
         </div>
       </form>
-    </section>
+    </section></main>
   );
 }
 

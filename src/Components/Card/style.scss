@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-
+    flex-wrap: wrap;
     .tag {
       background: rgba(199, 199, 199, 0.123);
       padding: 2%;

@@ -17,6 +17,7 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles({
   bar: {
     background: 'linear-gradient(45deg, #22577E 30%, #2ca7ff 90%)',
+    top : 0,
    
   },
 });
@@ -36,30 +37,18 @@ export default function MenuAppBar() {
 
   const handleClose = () => {
     setAnchorEl(null);
-    this.props.history.push("/login");
   };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={auth}
-              onChange={handleChange}
-              aria-label="login switch"
-            />
-          }
-          label={auth ? "Logout" : "Login"}
-        />
-      </FormGroup>
-      <AppBar position="static" className={classes.bar}>
+
+      <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
            <Link to="./" className="mainhome">We Care</Link> 
           </Typography>
-          {auth && <AccountCircle />}
-
+          {/* {auth && } */}
+          <AccountCircle />
           <div>
             <IconButton
               size="large"
