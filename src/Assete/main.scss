@@ -1,13 +1,11 @@
 :root {
-    --maincolor: #22577E;
-    --white: #ffffff;
-    --black : #000000;
-    --maincolorhover: #2ca7ff;
-    --halfmaincolor: rgba(11, 76, 255, 0.01);
-    --whitesmoke: rgb(245, 245, 245);
-  }
-
-
+  --maincolor: #22577e;
+  --white: #ffffff;
+  --black: #000000;
+  --maincolorhover: #2ca7ff;
+  --halfmaincolor: rgba(11, 76, 255, 0.01);
+  --whitesmoke: rgb(245, 245, 245);
+}
 
 $firstbreakpoint: 1100px;
 $maincolor: var(--maincolor);
@@ -26,6 +24,22 @@ body {
   background: $white;
 }
 
+main {
+  width: 60%;
+  margin: 3% auto;
+}
+
+.error{
+color: red;
+}
+
+.mainhome {
+  color: #ffffff;
+
+  &:hover {
+    color: #e4e4e4;
+  }
+}
 
 h1 {
   font-weight: 400;
@@ -61,7 +75,6 @@ h4,
 h5,
 span,
 p {
-  
   margin: 0%;
 }
 
@@ -71,9 +84,8 @@ a {
   margin: 0;
 }
 
-
-.mainbutton{
-  font-weight:500;
+.mainbutton {
+  font-weight: 500;
   cursor: pointer;
   background: $maincolor;
   color: $white;
@@ -81,7 +93,7 @@ a {
   border-radius: 5px;
   border: none;
 
-  &:hover{
+  &:hover {
     background: $maincolorhover;
     color: $black;
   }
