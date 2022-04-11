@@ -31,7 +31,6 @@ const useStyles = makeStyles({
 
 export default function MenuAppBar() {
   const classes = useStyles();
-
   const [drawer, setDrawer] = useState(false);
   const dispatch = useDispatch();
 
@@ -54,7 +53,7 @@ export default function MenuAppBar() {
             </Link>
           </Typography>
 
-          <div>
+
             <MenuIcon className={classes.buttonburger} onClick={toggleDrawer} />
 
             <Drawer
@@ -105,7 +104,7 @@ export default function MenuAppBar() {
                 </ListItem>
               </List>
             </Drawer>
-          </div>
+
         </Toolbar>
       </AppBar>
     </Box>

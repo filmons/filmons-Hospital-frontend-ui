@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 
-function Signup() {
+function DetailedPage() {
   return (
     <main>
     <section className="details-page">
@@ -34,4 +34,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default DetailedPage;
