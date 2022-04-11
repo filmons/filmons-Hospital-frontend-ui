@@ -1,7 +1,10 @@
-import { hopital } from "../types/hopital.types";
+import { Hospital } from "../types/hopital.types";
 import http from "./config";
 
 
-export const getAllHospitals = async () : Promise<any> => {
-    return await http.get('/hopital');
+const getAllHospitals = async () : Promise<Hospital[]> => {
+    const hospitals =  await http.get('/hospital');
+    return hospitals.data;
 }
+
+export default getAllHospitals;
