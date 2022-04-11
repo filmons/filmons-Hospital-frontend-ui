@@ -7,7 +7,7 @@ export const signIn = async (
   return await http.post("patient/login", user);
 };
 
-export const signUp = async (user: usersignup ,) : Promise<any> => {
+export const signUp = async (user: usersignup): Promise<any> => {
   return await http.post("patient/signup", user);
 };
 

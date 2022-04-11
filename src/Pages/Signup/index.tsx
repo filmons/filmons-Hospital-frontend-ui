@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userServices } from "../../services";
 import { signup } from "../../store/actions/user.action";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import "./style.scss";
 
 function Signup() {
@@ -17,6 +19,16 @@ function Signup() {
   const [tele, setTele] = useState("");
   const [error, setError] = useState("");
   const dispatch = useDispatch();
+  const [alignment, setAlignment] = React.useState("Patient");
+
+  const handleChange = (
+    event: React.MouseEvent<HTMLElement>,
+    newAlignment: string
+  ) => {
+    setAlignment(newAlignment);
+  };
+
+  console.log(alignment);
 
   const onClickSignUp = async (e: any) => {
     e.preventDefault();
@@ -43,6 +55,20 @@ function Signup() {
         <h2>Se connecter</h2>
         {error && <p className="error">{error}</p>}
         <form>
+          <div className="form-group">
+            <label htmlFor="email">
+              Vous etre<span className="required">*</span>
+            </label>
+            <ToggleButtonGroup
+              color="primary"
+              value={alignment}
+              exclusive
+              onChange={handleChange}
+            >
+              <ToggleButton value="Patient">Patient</ToggleButton>
+              <ToggleButton value="Praticien">Praticien</ToggleButton>
+            </ToggleButtonGroup>
+          </div>
           <div className="form-group">
             <label htmlFor="lastname">
               Prenom<span className="required">*</span>
