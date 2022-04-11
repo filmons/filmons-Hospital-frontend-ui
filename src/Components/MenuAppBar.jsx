@@ -1,18 +1,19 @@
 import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
 import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
+import { Button, Drawer, List, ListItem } from "@mui/material";
+import { logout } from "../store/actions/user.action";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import { useDispatch } from "react-redux";
+import LoginIcon from '@mui/icons-material/Login';
 
 
 const useStyles = makeStyles({
@@ -24,18 +25,30 @@ const useStyles = makeStyles({
 });
 
 export default function MenuAppBar() {
+
+
+
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
+  const [drawer, setDrawer] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const toggleDrawer = () => {
+      setDrawer(!drawer);
+  }
 
+
+  const exit = () => {
+      dispatch(logout());
+      toggleDrawer();
+  }
+ 
+ 
+
+  
+
+  return (
+      <AppBar position="static" className={classes.bar}>
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -48,50 +61,74 @@ export default function MenuAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
            <Link to="./" className="mainhome">We Care</Link> 
           </Typography>
+         
+
+
           {/* {auth && } */}
           <AccountCircle />
           <div>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
+            <AppBar position="static" >
+                <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+                    <IconButton color="inherit" onClick={toggleDrawer}>
+                        <MenuIcon />
+                    </IconButton>   
+                </Toolbar>
+            </AppBar>
+            <Drawer
+                open={drawer}
+                onClose={toggleDrawer}
+                style={{ width: 600 }}
+                anchor={'top'}
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorEl)}
-            >
-              <Link to="signup">
-                <MenuItem>Signup</MenuItem>
-              </Link>
-              <Link to="login">
-                <MenuItem>Login</MenuItem>
-              </Link>
-              <Link to="profile">
-                <MenuItem>Profil</MenuItem>
-              </Link>
-              <Link to="rdvs">
-                <MenuItem>Mes RDV</MenuItem>
-              </Link>
-              <MenuItem onClick={handleClose}>Fermer</MenuItem>
-            </Menu>
-          </div>
+                <List>
+                    <ListItem>
+                        <Link to="/">
+                            <Button color="secondary" onClick={exit}>
+                                <ExitToAppIcon /> Logout
+                            </Button>
+                        </Link>Selected ListItem
+
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/dashboard">
+                            <Button color="primary" onClick={toggleDrawer}>
+                                <DashboardIcon /> Dashboard
+                            </Button>
+                        </Link>
+                       
+                    </ListItem>
+                    <ListItem>
+                    <Link to="/login">
+                         <Button color="primary" onClick={toggleDrawer}>
+                         <LoginIcon/>
+                            LogIN
+                         </Button>
+                        </Link>
+                    </ListItem>
+
+                    <ListItem>
+                    <Link to="/signup">
+                         <Button color="primary" onClick={toggleDrawer}>
+                         <LoginIcon/>SignUp
+
+                         </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                    <Link to="/rdvs">
+                         <Button color="primary" onClick={toggleDrawer}>
+                         <AccountCircle/>Profil
+
+                         </Button>
+                        </Link>
+                    </ListItem>
+
+    
+                </List>
+            </Drawer>
+        </div>
         </Toolbar>
       </AppBar>
-    </Box>
+   
   );
 }
