@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-function Signup() {
+function Card(data: any) {
+  const hospital = data.hospital;
   return (
-    <section className="card">
-      <h2>HOSPITAL NAME</h2>
-      <p>01 01 20 35 23</p>
-      <p>5 RUE FRANCE , PARIS</p>
+    <Link to={"/" + hospital.id} className="card">
+      <h2>{hospital.name}</h2>
+      <p>{hospital.telephone}</p>
+      <p>{hospital.address}</p>
 
       <div className="tags">
         <p className="tag">tag</p>
@@ -18,9 +19,9 @@ function Signup() {
         <p className="tag">tag</p>
         <p className="tag">tag</p>
         <p className="tag">tag</p>
-        </div>
-     </section>
+      </div>
+    </Link>
   );
 }
 
-export default Signup;
+export default Card;

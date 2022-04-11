@@ -19,13 +19,18 @@ import { Box } from "@material-ui/core";
 const useStyles = makeStyles({
   bar: {
     background: "linear-gradient(45deg, #22577E 30%, #2ca7ff 90%)",
-    top: 0,
+  },
+  buttonburger: {
+    color: "white",
+    padding: "10px",
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
 });
 
 export default function MenuAppBar() {
   const classes = useStyles();
-
   const [drawer, setDrawer] = useState(false);
   const dispatch = useDispatch();
 
@@ -48,22 +53,13 @@ export default function MenuAppBar() {
             </Link>
           </Typography>
 
-          {/* {auth && } */}
-          <AccountCircle />
-          <div>
-            <AppBar position="static">
-              <Toolbar
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <IconButton color="inherit" onClick={toggleDrawer}>
-                  <MenuIcon />
-                </IconButton>
-              </Toolbar>
-            </AppBar>
+
+            <MenuIcon className={classes.buttonburger} onClick={toggleDrawer} />
+
             <Drawer
               open={drawer}
               onClose={toggleDrawer}
-              style={{ width: 600 }}
+              style={{ width: "250px" }}
               anchor={"top"}
             >
               <List>
@@ -108,7 +104,7 @@ export default function MenuAppBar() {
                 </ListItem>
               </List>
             </Drawer>
-          </div>
+
         </Toolbar>
       </AppBar>
     </Box>

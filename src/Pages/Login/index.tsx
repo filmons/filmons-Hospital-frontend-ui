@@ -7,6 +7,7 @@ import { login } from "../../store/actions/user.action";
 import { useNavigate } from "react-router-dom";
 import { userServices } from "../../services";
 
+
 function Login() {
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -32,8 +33,10 @@ function Login() {
     <main>
       <section className="login">
         <h2>Se connecter</h2>
+
         {error && <p className="error">{error}</p>}
         <form>
+       
           <div className="form-group">
             <label htmlFor="email">
               Email<span className="required">*</span>

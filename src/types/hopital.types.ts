@@ -1,5 +1,6 @@
-export type hopital = {
-    nom: string,
-    tel: string,
-    adresse: string
+export type Hospital = {
+    id?: number,
+    name: string,
+    address: string,
+    telephone: string
 }
