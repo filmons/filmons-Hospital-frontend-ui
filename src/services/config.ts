@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const http = axios.create({
   baseURL: `http://localhost:3050/api`,
-  withCredentials: true
+  withCredentials: false,
 });
 
 http.interceptors.request.use(request => {
