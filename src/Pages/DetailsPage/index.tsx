@@ -5,6 +5,7 @@ import "./style.scss";
 
 function Signup() {
   return (
+    <main>
     <section className="details-page">
       <h2>HOSPITAL NAME</h2>
       <p>01 01 20 35 23</p>
@@ -29,7 +30,7 @@ function Signup() {
         Prendre rdv
         </button>
 
-     </section>
+     </section></main>
   );
 }
 

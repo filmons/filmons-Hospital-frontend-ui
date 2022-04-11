@@ -1,0 +1,25 @@
+@import "../../Assete/main.scss";
+
+.searchbar {
+  width: 100%;
+  background-image: linear-gradient(
+    #2d73a5ab,
+      rgb(255, 255, 255)
+    ),
+    url("https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80");
+  margin: 0% auto 5% auto;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  
+
+  div{
+    background: rgb(255, 255, 255);
+    padding: 1% 2%;
+    display: flex;
+    border-radius: 15px;
+  }
+}
