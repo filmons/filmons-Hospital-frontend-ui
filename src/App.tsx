@@ -6,7 +6,7 @@ import Login from "../src/Pages/Login";
 import Signup from "../src/Pages/Signup";
 import Header from "./Components/MenuAppBar";
 import DetailsPage from "../src/Pages/DetailsPage";
-import DashBoard from "./Pages/DetailsPage copy";
+import DashBoard from "./Pages/DashBoard";
 
 function App() {
   return (
