@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: CI=false Run build
+      - name: Run build
         run: npm run build
       - name: Install SSH Key
       
