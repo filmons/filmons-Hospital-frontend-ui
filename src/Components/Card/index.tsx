@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 function Card(data: any) {
   const hospital = data.hospital;

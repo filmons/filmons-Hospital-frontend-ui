@@ -1,5 +1,5 @@
 import { signIn, getByUser, signUp } from "./user.service";
-import { Search } from "./praticien.service";
+import { Search , Add } from "./praticien.service";
 import { AddHospital, getAllHospitals } from "./hopital.service";
 
 export const userServices = {
@@ -10,6 +10,7 @@ export const userServices = {
 
 export const praticienServices = {
   Search,
+  Add ,
 };
 
 export const hopitalServices = {
