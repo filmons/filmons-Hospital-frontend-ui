@@ -1,7 +1,11 @@
 {
+  "homepage": "https://filmons.github.io/Filmon-seare/",
   "name": "hospital-frontend-ui",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
